@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>5. Lab 4 – Configuring an APM Webtop &#8212; Introduction to Universal Access  documentation</title>
+    <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/f5_agility_theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/f5.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Lab 5 – FORMS Based Authentication" href="lab5.html" />
+    <link rel="prev" title="4. Lab 3 – Configuring a VPN Policy" href="lab3.html" />
+<!--
+# Copyright 2017 F5 Networks
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+<link href="https://cdn.f5.com/favicon.ico" rel="icon">
+<script src="https://use.fontawesome.com/21fb8a09c3.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  </head><body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="row corp-header">
+      <div class="container corp-header">
+        <div class="container corp-menu">
+          <ul>
+            <li><a href="https://f5.com" class="internalLink">F5.com</a></li>
+            <li><a href="https://support.f5.com">Support</a></li>
+            <li><a href="https://devcentral.f5.com">Community</a></li>
+            <li><a href="https://github.com/F5Networks">GitHub</a></li>
+            <li><a href="https://f5.com/about-us/careers">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pageHeader">
+      <div class="container stat">
+        <div class="col-xs-12 stat">
+          <a class="internalLink" href="https://f5.com">
+            <img class="logo" src="https://cdn.f5.com/websites/support/assets/images/logo.svg" width="50" height="44" alt="F5 Networks" title="F5 Networks" border="0">
+          </a>
+            <ul id="MainMenu" class="main-menu">
+              <li>
+                <a href="#">Products
+                  <span class="indicator"><span class="arrow-up"></span></span>
+                </a>
+
+                <div class="menu-panel soft-hide" id="ProductsSubmenu">
+                  <div class="container">
+                    <ul class="submenu col-sm-11">
+                      <li class="third"><span class="a-mm-h">Connectors</span>
+                        <ul>
+                          <li><a href="http://clouddocs.f5.com/products/connectors/marathon-bigip-ctlr/latest" data-link-type="Nav: Mega">F5 Marathon BIG-IP Controller</a></li>
+                          <li><a href="http://clouddocs.f5.com/products/connectors/marathon-asp-ctlr/latest" data-link-type="Nav: Mega">F5 Marathon ASP Controller</a></li>
+                          <li><a href="http://clouddocs.f5.com/products/connectors/k8s-bigip-ctlr/latest" data-link-type="Nav: Mega">F5 Kubernetes BIG-IP Controller</a></li>
+                          <li><a href="http://clouddocs.f5.com/products/connectors/f5-kube-proxy/latest" data-link-type="Nav: Mega">F5 Kubernetes Proxy</a></li>
+                        </ul>
+                        <!--span class="seemore"><a data-link-type="Nav: Mega" href="/products/connectors">See all </a></--span-->
+                      </li>
+                      <li class="divider"></li>
+                      <li class="third"><span class="a-mm-h">Application Service Proxy</span>
+                        <ul>
+                          <li><a href="http://clouddocs.f5.com/products/asp/latest" data-link-type="Nav: Mega">F5 Application Service Proxy</a></li>
+                        </ul>
+                        <!--span class="seemore"><a href="/products/">See all </a></span-->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Container Integrations
+                  <span class="indicator"><span class="arrow-up"></span></span>
+                </a>
+
+                <div class="menu-panel soft-hide" id="ContainersSubmenu">
+                  <div class="container">
+                    <ul class="submenu col-sm-11">
+                      <li class="third"><span class="a-mm-h">Container Integrations</span>
+                        <ul>
+                          <li><a href="http://clouddocs.f5.com/containers/latest/marathon/" data-link-type="Nav: Mega">Mesos Marathon</a></li>
+                          <li><a href="http://clouddocs.f5.com/containers/latest/kubernetes/" data-link-type="Nav: Mega">Kubernetes</a></li>
+                          <li><a href="http://clouddocs.f5.com/containers/latest/openshift/" data-link-type="Nav: Mega">RedHat OpenShift</a></li>
+                        </ul>
+                        <span class="seemore"><a data-link-type="Nav: Mega" href="http://clouddocs.f5.com/containers/latest">View details </a></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Clouds
+                  <span class="indicator"><span class="arrow-up"></span></span>
+                </a>
+
+                <div class="menu-panel soft-hide" id="CloudsSubmenu">
+                  <div class="container">
+                    <ul class="submenu col-sm-11">
+                      <li class="third"><span class="a-mm-h">Cloud Integrations</span>
+                        <ul>
+                          <li><a href="http://clouddocs.f5.com/cloud/openstack/" data-link-type="Nav: Mega">OpenStack</a></li>
+                        </ul>
+                        <!--span class="seemore"><a data-link-type="Nav: Mega" href="/cloud/">See all </a></span-->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Resources
+                  <span class="indicator"><span class="arrow-up"></span></span>
+                </a>
+                <div class="menu-panel soft-hide" id="UPCProgramSubmenu">
+                  <div class="container">
+                    <ul class="submenu col-sm-11">
+                      <li class="third">
+                        <span class="a-mm-h">Downloads</span>
+                        <ul>
+                          <li><a target="_blank" data-link-type="Nav: Mega" href="https://hub.docker.com/r/f5networks/" class="internalLink">Docker Hub</a></li>
+                          <li><a target="_blank" data-link-type="Nav: Mega" href="https://store.docker.com/images/f5networks" class="internalLink">Docker Store</a></li>
+                        </ul>
+                      </li>
+                      <li class="divider"></li>
+
+                      <li class="third">
+                        <span class="a-mm-h">OpenSource</span>
+                        <ul>
+                          <li><a target="_blank" data-link-type="Nav: Mega" href="https://github.com/F5Networks" class="internalLink">GitHub</a></li>
+                        </ul>
+                      </li>
+                      <li class="divider"></li>
+
+                      <li class="third">
+                        <a href="//university.f5.com" class="a-mm-h internalLink" target="_blank" data-link-type="Nav: Mega">F5 University</a>
+                        <ul>
+                          <li>
+                            <p>Get up to speed with free self-paced courses</p>
+                          </li>
+                        </ul>
+                        <a data-ng-href="https://devcentral.f5.com" class="a-mm-h internalLink" target="_blank" data-link-type="Nav: Mega" href="https://devcentral.f5.com">DevCentral</a>
+                        <ul>
+                          <li>
+                            <p>Join the community of 250,000+ technical peers</p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /container-fluid -->
+</nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-3 sidebartoc">
+         <h4><a href="../../">Introduction to Universal Access </a></h4>
+<div id="searchbox" style="display: none" role="search">
+  <form class="search" action="../../search.html" method="get">
+    <div>
+      <input type="text" name="q" placeholder="Search" style="padding-left: 6px;"/>
+      <!-- <input type="submit" value="Go" style="margin-top: 4px;"/> -->
+      <button type="submit" class="btn btn-primary btn-xs">Go</button>
+    </div>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+  <p class="caption">
+   <span class="caption-text">Current Page</span>
+  </p>
+  <ul>
+<li><a class="reference internal" href="#">5. Lab 4 – Configuring an APM Webtop</a><ul>
+<li><a class="reference internal" href="#lab-requirements">5.1. Lab Requirements</a></li>
+<li><a class="reference internal" href="#task-create-a-webtop-resource">5.2. Task – Create a Webtop resource</a></li>
+<li><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">5.3. Task – Enable “Content Rewrite” on the Virtual Server</a></li>
+<li><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">5.4. Task – Add Webtop resource to existing Access Policy</a></li>
+<li><a class="reference internal" href="#task-testing">5.5. Task – Testing</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">2. Lab 1 – Deploy a simple reverse proxy service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">3. Lab 2 – Create My First Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">4. Lab 3 – Configuring a VPN Policy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Lab 4 – Configuring an APM Webtop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">5.1. Lab Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-webtop-resource">5.2. Task – Create a Webtop resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">5.3. Task – Enable “Content Rewrite” on the Virtual Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">5.4. Task – Add Webtop resource to existing Access Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing">5.5. Task – Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lab5.html">6. Lab 5 – FORMS Based Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab6.html">7. Lab 6 – BASIC Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab7.html">8. Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="lab3.html"
+                        title="previous chapter">4. Lab 3 – Configuring a VPN Policy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="lab5.html"
+                        title="next chapter">6. Lab 5 – FORMS Based Authentication</a></p>
+        
+      </div>
+      <div class="col-md-offset-3 col-sm-offset-3 main">
+        <h4>
+          <a href="/">Community Training Classes &amp; Labs</a> &gt; <a href="../../index.html">Introduction to Universal Access</a>
+          <span class="right"><a href="../../genindex.html">Index</a></span>
+        </h4>
+        
+  <div class="section" id="lab-4-configuring-an-apm-webtop">
+<h1>5. Lab 4 – Configuring an APM Webtop<a class="headerlink" href="#lab-4-configuring-an-apm-webtop" title="Permalink to this headline">¶</a></h1>
+<p>In this lab, we will add a Webtop resource to the Access Policy
+created in the previous lab.</p>
+<div class="section" id="lab-requirements">
+<h2>5.1. Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).</li>
+</ul>
+</div>
+<div class="section" id="task-create-a-webtop-resource">
+<h2>5.2. Task – Create a Webtop resource<a class="headerlink" href="#task-create-a-webtop-resource" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Expand the <strong>Access</strong> tab from the main menu on the left and navigate
+to <strong>Webtops</strong> &gt; <strong>Webtop Lists</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Create</strong> to create a new Webtop called <strong>MyFullWebtop</strong>,
+select Type “<strong>Full</strong>”, uncheck “<strong>Minmize To Tray</strong>” and
+click <strong>Finished</strong>.</p>
+<p><a class="reference internal" href="../../_images/image39.png"><img alt="image38" src="../../_images/image39.png" style="width: 3.59097in; height: 2.50000in;" /></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="task-enable-content-rewrite-on-the-virtual-server">
+<h2>5.3. Task – Enable “Content Rewrite” on the Virtual Server<a class="headerlink" href="#task-enable-content-rewrite-on-the-virtual-server" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Browse to <strong>Local Traffic</strong> &gt; <strong>Virtual Servers &gt;</strong> <strong>Virtual Server
+List</strong> and click on the name of your VPN Virtual Server called
+<strong>MyVPNPolicy_vs</strong>.</p>
+</li>
+<li><p class="first">Scroll down to the “Content Rewrite” section, select
+“<strong>rewrite</strong>” for the “Rewrite Profile” field and click <strong>Update</strong>.</p>
+<p><a class="reference internal" href="../../_images/image40.png"><img alt="image39" src="../../_images/image40.png" style="width: 3.69861in; height: 2.96356in;" /></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="task-add-webtop-resource-to-existing-access-policy">
+<h2>5.4. Task – Add Webtop resource to existing Access Policy<a class="headerlink" href="#task-add-webtop-resource-to-existing-access-policy" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Browse to <strong>Access</strong> &gt; <strong>Profiles / Policies &gt; Access Profiles
+(Per-Session Policies)</strong>, click on <strong>Edit</strong> for <strong>MyVPNPolicy</strong>. A
+new tab should open to the Visual Policy Editor for <strong>MyVPNPolicy</strong>.</p>
+<p><a class="reference internal" href="../../_images/image41.png"><img alt="image40" src="../../_images/image41.png" style="width: 4.66142in; height: 1.48031in;" /></a></p>
+</li>
+<li><p class="first">Select the <strong>Advanced Resource Assign</strong> object.</p>
+</li>
+<li><p class="first">Click <strong>Add/Delete</strong>.</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Click on the <strong>Webtop</strong> tab, select the radio button for
+<strong>MyFullWebtop</strong>, then click the <strong>Update</strong> button at the bottom of
+the screen.</div>
+</div>
+<p><a class="reference internal" href="../../_images/image42.png"><img alt="image41" src="../../_images/image42.png" style="width: 3.89583in; height: 0.98194in;" /></a></p>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+<li><div class="first line-block">
+<div class="line">At the top left of the browser window, click on “<strong>Apply Access
+Policy</strong>”, then close the tab.</div>
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="../../_images/image43.png"><img alt="image42" src="../../_images/image43.png" style="width: 1.90000in; height: 0.40000in;" /></a></p>
+</li>
+</ol>
+</div>
+<div class="section" id="task-testing">
+<h2>5.5. Task – Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Open a web browser to the virtual server created in the previous lab
+by navigating to <strong>https://myvpn.f5demo.com</strong>. You will be presented
+with a Logon page similar to the one from the last lab.</p>
+</li>
+<li><p class="first">Enter the following credentials:</p>
+<p>Username: <strong>user</strong></p>
+<p>Password: <strong>Agility1</strong></p>
+</li>
+<li><p class="first">Click <strong>Logon</strong>.</p>
+<p>This will open the APM Webtop landing page that shows the resources you
+are allowed to access. In this lab, we’ve only configured one resource:
+<strong>Network Access</strong>, but you can add as many as you want and they will
+appear on this Webtop page.</p>
+<p><a class="reference internal" href="../../_images/image44.png"><img alt="image43" src="../../_images/image44.png" style="width: 3.83333in; height: 2.16875in;" /></a></p>
+</li>
+</ol>
+</div>
+</div>
+
+
+        
+		     <div class="row next-prev-btn-row">
+           <div class="col-lg-12">
+           
+		        <a href="lab3.html" title="4. Lab 3 – Configuring a VPN Policy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+           
+           
+              <a href="lab5.html" title="6. Lab 5 – FORMS Based Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+           
+		     </div>
+         </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <div class="container-fluid">
+      <div class="row">
+        <div class="content-fluid pre-footer">
+          <div class="blocks-container">
+            <div class="block">
+              <h3>Support Programs</h3>
+              <p>Regionally located support centers enable F5 to provide support in a number of languages through native-speaking support engineers.</p>
+              <a class="btn internalLink" data-ng-href="https://f5.com/support/support-offerings" target="_blank" href="https://f5.com/support/support-offerings">See more
+                <span class="icon-1x-right icon-new-window" data-icon="new-window">​</span>
+              </a>
+            </div>
+            <div class="block">
+              <h3>Contact Support</h3>
+              <p>
+                North America: 1-888-882-7535<br>
+                Outside North America: 800-11-275-435
+              </p>
+              <a class="btn internalLink" data-ng-href="https://f5.com/about-us/contact#regional-support" target="_blank" href="https://f5.com/about-us/contact#regional-support">Local Support Numbers
+                <span class="icon-1x-right icon-new-window" data-icon="new-window">​</span>
+              </a>
+            </div>
+            <div class="block">
+              <h3>Feedback and Help</h3>
+              <p>Have questions, suggestions, or just want to get something off your chest? Let us know.</p>
+              <a class="btn" data-ui-sref="siteFeedback" target="_blank" href="https://support.f5.com/csp/siteFeedback">Leave feedback</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer">
+          <div class="container">
+            <div class="col-sm-3 col-md-2">
+              <h4>About F5</h4>
+              <ul>
+                <li><a data-ng-href="https://f5.com/about-us/contact" target="_blank" data-link-type="footer" href="https://f5.com/about-us/contact" class="internalLink">Contact F5</a>
+                </li>
+                <li><a data-ng-href="https://f5.com/about-us/careers" target="_blank" data-link-type="footer" href="https://f5.com/about-us/careers" class="internalLink">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-3 col-md-2">
+              <h4>Education</h4>
+              <ul>
+                <li><a data-ng-href="https://f5.com/education/training" target="_blank" data-link-type="footer" href="https://f5.com/education/training" class="internalLink">Training</a>
+                </li>
+                <li><a data-ng-href="https://f5.com/education/certification" target="_blank" data-link-type="footer" href="https://f5.com/education/certification" class="internalLink">Certification</a>
+                </li>
+                <li><a data-ng-href="https://f5.com/education/training/free-courses" target="_blank" data-link-type="footer" href="https://f5.com/education/training/free-courses" class="internalLink">Free Online Training</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-3 col-md-2">
+              <h4>F5 sites</h4>
+              <ul>
+              <li><a data-ng-href="https://f5.com" target="_blank" data-link-type="footer" href="https://f5.com" class="internalLink">F5.com</a>
+              </li>
+              <li><a data-ng-href="https://devcentral.f5.com" target="_blank" data-link-type="footer" href="https://devcentral.f5.com" class="internalLink">Community</a>
+              </li>
+              <li><a data-ng-href="https://partners.f5.com" target="_blank" data-link-type="footer" href="https://partners.f5.com" class="internalLink">Partners</a>
+              </li>
+          </ul>
+      </div>
+
+      <div class="col-sm-3 col-md-2">
+          <h4>Support Tasks</h4>
+          <ul>
+              <li><a data-ui-sref="mySupport.createServiceRequest" data-link-type="footer" href="https://support.f5.com/csp/my-support/service-request">Create Service Request </a>
+              </li>
+              <li><a data-ng-href="https://f5.com/about-us/contact#regional-support" target="_blank" data-link-type="footer" href="https://f5.com/about-us/contact#regional-support" class="internalLink">Contact Support</a>
+              </li>
+              <li><a data-ui-sref="siteFeedback" target="_blank" data-link-type="footer" href="https://support.f5.com/csp/siteFeedback">Leave feedback [+]</a>
+              </li>
+          </ul>
+      </div>
+
+      <div class="col-xs-12 col-md-3 right">
+          <h4>Connect with us</h4>
+          <ul class="social_icons">
+              <li><a href="//twitter.com/f5networks" target="_blank" data-name="twitter" data-type="" data-prefix="social" data-utf="E032" title="Twitter" class="externalLink"><i class="icon-1x icon-twitter icon-inverse-circle" data-link-type="footer"></i></a></li>
+              <li><a href="//www.linkedin.com/companies/f5-networks" target="_blank" class="linkedin externalLink" title="LinkedIn"><i class="icon-1x icon-linkedin icon-inverse-circle" data-link-type="footer"></i></a></li>
+              <li><a href="//www.facebook.com/f5networksinc" target="_blank" class="facebook externalLink" title="Facebook"><i class="icon-1x icon-facebook icon-inverse-circle" data-link-type="footer"></i></a></li>
+              <li><a href="//www.youtube.com/f5networksinc" target="_blank" class="youtube externalLink" title="YouTube"><i class="icon-1x icon-youtube icon-inverse-circle" data-link-type="footer"></i></a></li>
+              <li><a data-ng-href="https://devcentral.f5.com" target="_blank" class="devcentral internalLink" title="DevCentral" href="https://devcentral.f5.com"><i class="icon-1x icon-dc-pos icon-inverse-circle" data-link-type="footer"></i></a></li>
+          </ul>
+      </div>
+
+      <div class="content-fluid left">
+          <div class="col-xs-12">
+              <p>
+                  © Copyright <span class="ng-binding">2017</span> by F5 Networks, Inc. |
+                  <a data-ng-href="https://f5.com/about-us/policies" target="_blank" data-link-type="footer" href="https://f5.com/about-us/policies" class="internalLink">Policies</a> |
+                  <a data-ng-href="https://f5.com/about-us/policies/trademarks" target="_blank" data-link-type="footer" href="https://f5.com/about-us/policies/trademarks" class="internalLink">Trademarks</a>
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+  </div>
+</div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../../_static/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    jQuery.noConflict(true)
+  </script>
+  </body>
+</html>

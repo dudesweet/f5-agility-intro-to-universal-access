@@ -15,4 +15,4 @@ Welcome to the |classbold| lab at F5 Agility |year|
    :glob:
 
    intro*
-   class*/class*
+   class*/module*/lab*
