@@ -1,5 +1,5 @@
-Class - |classname|
-===================
+Overview - |classname|
+======================
 This class will cover APM concepts and will guide students
 through configuration steps for the following common use cases:
 
@@ -8,11 +8,9 @@ through configuration steps for the following common use cases:
 - Using different authentication protocols
 - Single-Sign-On (SSO) functionality
 
-Getting Started
----------------
 
 Login instructions
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Please follow the instructions provided by the instructor to start your
 lab and access your jump host.
@@ -45,7 +43,7 @@ interfaces (HTTPS, SSH).
 
 
 Lab Topology
-~~~~~~~~~~~~
+------------
 
 .. TODO:: Review/complete/update lab topology
 
@@ -77,7 +75,7 @@ The following components have been included in your lab environment:
 
 
 Lab Components
-^^^^^^^^^^^^^^
+--------------
 
 .. TODO:: Complete lab components table
 
@@ -104,8 +102,8 @@ components:
       - ``user``/``Agility1``
 
 
-Timing for Labs
-^^^^^^^^^^^^^^^
+Labs Timing/Duration
+--------------------
 
 The time it takes to perform each lab varies and is mostly dependent on accurately completing steps. Below is an estimate of how long it will take for each lab:
 
