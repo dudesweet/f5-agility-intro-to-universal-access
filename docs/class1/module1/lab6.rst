@@ -28,9 +28,7 @@ Task – Create a Pool
 #. **Add** the following “New Member/Node” to the pool and click
    **Finished**:
 
-   #. Address: **10.128.20.203**
-
-   #. Service Port: **80**
+   - Node Name: **basic**, Address: **10.128.20.203**, Service Port: **80**
 
       |image62|
 

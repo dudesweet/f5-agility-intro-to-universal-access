@@ -23,11 +23,11 @@ Follow these steps to complete this task:
    the left.
 #. **Add** the following “new node” members to the pool:
 
-   -  Address: **10.128.20.200** Service Port **80**
+   -  Node Name: **server1**, Address: **10.128.20.200**, Service Port **80**
 
-   -  Address: **10.128.20.201** Service Port **80**
+   -  Node Name: **server2**, Address: **10.128.20.201**, Service Port **80**
 
-   -  Address: **10.128.20.202** Service Port **80**
+   -  Node Name: **server3**, Address: **10.128.20.202**, Service Port **80**
 
    |image1|
 
