@@ -90,8 +90,7 @@ Task - Testing
 
 You should now be able to browse to either Virtual Server (HTTP or
 HTTPs) and you should get the same page. Try:
-`**http://www.f5demo.com** <http://www.f5demo.com>`__ **and**
-`**https://www.f5demo.com** <https://www.f5demo.com>`__
+**http://www.f5demo.com** and **https://www.f5demo.com**
 
 |image7|
 
