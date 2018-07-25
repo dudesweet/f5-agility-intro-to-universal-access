@@ -45,9 +45,7 @@ interfaces (HTTPS, SSH).
 Lab Topology
 ------------
 
-.. TODO:: Review/complete/update lab topology
-
-- |image0|
+|image0|
 
 
 The following components have been included in your lab environment:
@@ -77,8 +75,6 @@ The following components have been included in your lab environment:
 Lab Components
 --------------
 
-.. TODO:: Complete lab components table
-
 The following table lists VLANS, IP Addresses and Credentials for all
 components:
 
@@ -98,8 +94,10 @@ components:
     * - Jumphost
       - - **Management:** 10.128.1.5
         - **External:** 10.128.10.5
-				-
       - ``user``/``Agility1``
+    * - Lab Server
+      - - **Internal:** 10.128.20.201
+      - ``administrator``/``Agility2018``
 
 
 Labs Timing/Duration
