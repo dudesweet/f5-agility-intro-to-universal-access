@@ -96,10 +96,9 @@ Task – Testing
    |image36|
 
 #. Open a new browser tab and confirm that you are now connected to
-    the internal network by browsing directly to the HTTP server used
-    in the pool for the previous labs:
-    **http://server1.f5demo.com**. You
-    should see a page similar to the following:
+   the internal network by browsing directly to the HTTP server used
+   in the pool for the previous labs:
+   **http://server1.f5demo.com**. You should see a page similar to the following:
 
    |image37|
 

@@ -70,10 +70,7 @@ Task – Testing without APM
 Observe the current behavior of the login page without authentication
 enforced by APM.
 
-#. | Open your web browser and go to
-     **https://forms.f5demo.com****.
-     You should see a page that looks as follows:
-   |
+#. Open your web browser and go to **https://forms.f5demo.com**. You should see a page that looks as follows:
 
    |image48|
 
@@ -103,8 +100,7 @@ Task – Create Access Policy to use with Forms Based Authentication
 
 #.  Click **Next**
 
-#.  | Click **Next** for Option 1 on the Configuration Options page
-    |
+#.  Click **Next** for Option 1 on the Configuration Options page
 
     |image51|
 
@@ -142,7 +138,7 @@ Task – Create Access Policy to use with Forms Based Authentication
 
     #. Enter **UserName** in the “Form Parameter For User Name” field
 
-    #. Enter **Password** in the “Form Parameter For Password” field **
+    #. Enter **Password** in the “Form Parameter For Password” field
 
        |image54|
 
@@ -152,7 +148,7 @@ Task – Create Access Policy to use with Forms Based Authentication
 
     #. Select Use **Existing HTTPS Server**
 
-    #. Choose **/Common/forms\_vs** for the Virtual Server **
+    #. Choose **/Common/forms\_vs** for the Virtual Server
 
        |image55|
 
@@ -171,7 +167,7 @@ Task – Create Access Policy to use with Forms Based Authentication
 
    #. **Add** “\ **/Account/Logout**\ ” to the “Logout URI Include” field
 
-   #. Change **Logout URI Timeout** to **1** second\ **
+   #. Change **Logout URI Timeout** to **1** second
 
       |image56|
 
@@ -227,8 +223,7 @@ enforced by APM.
 
    Password: **Agility1**
 
-   | Once successfully logged in you will see the same web page
-   observed in task 2:
+   Once successfully logged in you will see the same web page observed in task 2:
 
    |image61|
 
