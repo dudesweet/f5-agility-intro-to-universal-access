@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. Lab 2 – Create My First Policy &#8212; Introduction to Universal Access  documentation</title>
+    <title>Lab 2 – Create My First Policy &#8212; Introduction to Universal Access  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,8 +28,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Lab 3 – Configuring a VPN Policy" href="lab3.html" />
-    <link rel="prev" title="2. Lab 1 – Deploy a simple reverse proxy service" href="lab1.html" />
+    <link rel="next" title="Lab 3 – Configuring a VPN Policy" href="lab3.html" />
+    <link rel="prev" title="Lab 1 – Deploy a simple reverse proxy service" href="lab1.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -212,12 +212,12 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">3. Lab 2 – Create My First Policy</a><ul>
-<li><a class="reference internal" href="#lab-requirements">3.1. Lab Requirements</a></li>
-<li><a class="reference internal" href="#task-define-an-authentication-server">3.2. Task – Define an Authentication Server</a></li>
-<li><a class="reference internal" href="#task-create-a-simple-access-profile">3.3. Task – Create a Simple Access Profile</a></li>
-<li><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">3.4. Task – Associate Access Policy to Virtual Servers</a></li>
-<li><a class="reference internal" href="#task-testing">3.5. Task – Testing</a></li>
+<li><a class="reference internal" href="#">Lab 2 – Create My First Policy</a><ul>
+<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li><a class="reference internal" href="#task-define-an-authentication-server">Task – Define an Authentication Server</a></li>
+<li><a class="reference internal" href="#task-create-a-simple-access-profile">Task – Create a Simple Access Profile</a></li>
+<li><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">Task – Associate Access Policy to Virtual Servers</a></li>
+<li><a class="reference internal" href="#task-testing">Task – Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -225,29 +225,29 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Overview - Introduction to Universal Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab1.html">2. Lab 1 – Deploy a simple reverse proxy service</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Lab 2 – Create My First Policy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">3.1. Lab Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-define-an-authentication-server">3.2. Task – Define an Authentication Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-a-simple-access-profile">3.3. Task – Create a Simple Access Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">3.4. Task – Associate Access Policy to Virtual Servers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing">3.5. Task – Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Overview - Introduction to Universal Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Lab 1 – Deploy a simple reverse proxy service</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 2 – Create My First Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-define-an-authentication-server">Task – Define an Authentication Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-simple-access-profile">Task – Create a Simple Access Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">Task – Associate Access Policy to Virtual Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing">Task – Testing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lab3.html">4. Lab 3 – Configuring a VPN Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab4.html">5. Lab 4 – Configuring an APM Webtop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab5.html">6. Lab 5 – FORMS Based Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab6.html">7. Lab 6 – BASIC Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab7.html">8. Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Lab 3 – Configuring a VPN Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab4.html">Lab 4 – Configuring an APM Webtop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab5.html">Lab 5 – FORMS Based Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab6.html">Lab 6 – BASIC Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab7.html">Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="lab1.html"
-                        title="previous chapter">2. Lab 1 – Deploy a simple reverse proxy service</a></p>
+                        title="previous chapter">Lab 1 – Deploy a simple reverse proxy service</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="lab3.html"
-                        title="next chapter">4. Lab 3 – Configuring a VPN Policy</a></p>
+                        title="next chapter">Lab 3 – Configuring a VPN Policy</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -257,16 +257,16 @@
         </h4>
         
   <div class="section" id="lab-2-create-my-first-policy">
-<h1>3. Lab 2 – Create My First Policy<a class="headerlink" href="#lab-2-create-my-first-policy" title="Permalink to this headline">¶</a></h1>
+<h1>Lab 2 – Create My First Policy<a class="headerlink" href="#lab-2-create-my-first-policy" title="Permalink to this headline">¶</a></h1>
 <p>In this lab, we will use the resources configured in the previous lab
 and configure a simple Access Profile using the Visual Policy Editor
 (VPE) to perform user authentication.</p>
 <div class="section" id="lab-requirements">
-<h2>3.1. Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
 <p>Working HTTP and HTTPS Virtual Servers (from previous lab)</p>
 </div>
 <div class="section" id="task-define-an-authentication-server">
-<h2>3.2. Task – Define an Authentication Server<a class="headerlink" href="#task-define-an-authentication-server" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Define an Authentication Server<a class="headerlink" href="#task-define-an-authentication-server" title="Permalink to this headline">¶</a></h2>
 <p>Before we can create an access profile, we must create the necessary AAA
 server profile for our Active Directory.</p>
 <p>Follow these steps to complete this task:</p>
@@ -290,7 +290,7 @@ Directory</strong></p>
 </ol>
 </div>
 <div class="section" id="task-create-a-simple-access-profile">
-<h2>3.3. Task – Create a Simple Access Profile<a class="headerlink" href="#task-create-a-simple-access-profile" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create a Simple Access Profile<a class="headerlink" href="#task-create-a-simple-access-profile" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Navigate to <strong>Access &gt; Profiles / Policies &gt; Access Profiles (Per-Session Policies)</strong></p>
 <p><a class="reference internal" href="../../_images/image12.png"><img alt="image10" src="../../_images/image12.png" style="width: 2.81496in; height: 2.04331in;" /></a></p>
@@ -343,7 +343,7 @@ Directory</strong></p>
 </ol>
 </div>
 <div class="section" id="task-associate-access-policy-to-virtual-servers">
-<h2>3.4. Task – Associate Access Policy to Virtual Servers<a class="headerlink" href="#task-associate-access-policy-to-virtual-servers" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Associate Access Policy to Virtual Servers<a class="headerlink" href="#task-associate-access-policy-to-virtual-servers" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have created an access policy, we must apply it to the appropriate virtual server to be able to use it.</p>
 <ol class="arabic">
 <li><p class="first">From the <strong>Local Traffic</strong> menu, navigate to the <strong>Virtual Servers List</strong> and click the name of the virtual server created previously: <strong>https_vs</strong>.</p>
@@ -356,7 +356,7 @@ Directory</strong></p>
 </ol>
 </div>
 <div class="section" id="task-testing">
-<h2>3.5. Task – Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
 <p>Now you are ready to test.</p>
 <ol class="arabic">
 <li><p class="first">Open a new browser window and open the URL for the virtual server that has the access policy applied: <strong>https://www.f5demo.com</strong>. You will be presented with a login window.</p>
@@ -379,10 +379,10 @@ Directory</strong></p>
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="lab1.html" title="2. Lab 1 – Deploy a simple reverse proxy service" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="lab1.html" title="Lab 1 – Deploy a simple reverse proxy service" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
-              <a href="lab3.html" title="4. Lab 3 – Configuring a VPN Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="lab3.html" title="Lab 3 – Configuring a VPN Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>

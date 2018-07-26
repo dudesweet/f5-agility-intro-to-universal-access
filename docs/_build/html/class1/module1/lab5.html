@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6. Lab 5 – FORMS Based Authentication &#8212; Introduction to Universal Access  documentation</title>
+    <title>Lab 5 – FORMS Based Authentication &#8212; Introduction to Universal Access  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,8 +28,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. Lab 6 – BASIC Authentication" href="lab6.html" />
-    <link rel="prev" title="5. Lab 4 – Configuring an APM Webtop" href="lab4.html" />
+    <link rel="next" title="Lab 6 – BASIC Authentication" href="lab6.html" />
+    <link rel="prev" title="Lab 4 – Configuring an APM Webtop" href="lab4.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -212,15 +212,15 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">6. Lab 5 – FORMS Based Authentication</a><ul>
-<li><a class="reference internal" href="#lab-requirements">6.1. Lab Requirements</a></li>
-<li><a class="reference internal" href="#task-create-a-pool">6.2. Task – Create a Pool</a></li>
-<li><a class="reference internal" href="#task-create-a-virtual-server">6.3. Task – Create a Virtual Server</a></li>
-<li><a class="reference internal" href="#task-testing-without-apm">6.4. Task – Testing without APM</a></li>
-<li><a class="reference internal" href="#task-create-access-policy-to-use-with-forms-based-authentication">6.5. Task – Create Access Policy to use with Forms Based Authentication</a></li>
-<li><a class="reference internal" href="#task-applying-access-policy-changes">6.6. Task – Applying Access Policy Changes</a></li>
-<li><a class="reference internal" href="#task-testing-with-apm-authentication">6.7. Task – Testing with APM Authentication</a></li>
-<li><a class="reference internal" href="#task-testing-logout">6.8. Task – Testing Logout</a></li>
+<li><a class="reference internal" href="#">Lab 5 – FORMS Based Authentication</a><ul>
+<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li><a class="reference internal" href="#task-create-a-pool">Task – Create a Pool</a></li>
+<li><a class="reference internal" href="#task-create-a-virtual-server">Task – Create a Virtual Server</a></li>
+<li><a class="reference internal" href="#task-testing-without-apm">Task – Testing without APM</a></li>
+<li><a class="reference internal" href="#task-create-access-policy-to-use-with-forms-based-authentication">Task – Create Access Policy to use with Forms Based Authentication</a></li>
+<li><a class="reference internal" href="#task-applying-access-policy-changes">Task – Applying Access Policy Changes</a></li>
+<li><a class="reference internal" href="#task-testing-with-apm-authentication">Task – Testing with APM Authentication</a></li>
+<li><a class="reference internal" href="#task-testing-logout">Task – Testing Logout</a></li>
 </ul>
 </li>
 </ul>
@@ -228,32 +228,32 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Overview - Introduction to Universal Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab1.html">2. Lab 1 – Deploy a simple reverse proxy service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab2.html">3. Lab 2 – Create My First Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab3.html">4. Lab 3 – Configuring a VPN Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab4.html">5. Lab 4 – Configuring an APM Webtop</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Lab 5 – FORMS Based Authentication</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">6.1. Lab Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-a-pool">6.2. Task – Create a Pool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-a-virtual-server">6.3. Task – Create a Virtual Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing-without-apm">6.4. Task – Testing without APM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-access-policy-to-use-with-forms-based-authentication">6.5. Task – Create Access Policy to use with Forms Based Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-applying-access-policy-changes">6.6. Task – Applying Access Policy Changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing-with-apm-authentication">6.7. Task – Testing with APM Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing-logout">6.8. Task – Testing Logout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Overview - Introduction to Universal Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Lab 1 – Deploy a simple reverse proxy service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Lab 2 – Create My First Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Lab 3 – Configuring a VPN Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab4.html">Lab 4 – Configuring an APM Webtop</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 5 – FORMS Based Authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-pool">Task – Create a Pool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-virtual-server">Task – Create a Virtual Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing-without-apm">Task – Testing without APM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-access-policy-to-use-with-forms-based-authentication">Task – Create Access Policy to use with Forms Based Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-applying-access-policy-changes">Task – Applying Access Policy Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing-with-apm-authentication">Task – Testing with APM Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing-logout">Task – Testing Logout</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lab6.html">7. Lab 6 – BASIC Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab7.html">8. Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab6.html">Lab 6 – BASIC Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab7.html">Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="lab4.html"
-                        title="previous chapter">5. Lab 4 – Configuring an APM Webtop</a></p>
+                        title="previous chapter">Lab 4 – Configuring an APM Webtop</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="lab6.html"
-                        title="next chapter">7. Lab 6 – BASIC Authentication</a></p>
+                        title="next chapter">Lab 6 – BASIC Authentication</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -263,12 +263,12 @@
         </h4>
         
   <div class="section" id="lab-5-forms-based-authentication">
-<h1>6. Lab 5 – FORMS Based Authentication<a class="headerlink" href="#lab-5-forms-based-authentication" title="Permalink to this headline">¶</a></h1>
+<h1>Lab 5 – FORMS Based Authentication<a class="headerlink" href="#lab-5-forms-based-authentication" title="Permalink to this headline">¶</a></h1>
 <p>In this lab, we will show you how to configure APM to leverage SSO
 functionality with an application server that uses forms based
 authentication.</p>
 <div class="section" id="lab-requirements">
-<h2>6.1. Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>BIG-IP with APM licensed and activated</li>
 <li>Server running AD and Web services</li>
@@ -276,7 +276,7 @@ authentication.</p>
 </ul>
 </div>
 <div class="section" id="task-create-a-pool">
-<h2>6.2. Task – Create a Pool<a class="headerlink" href="#task-create-a-pool" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create a Pool<a class="headerlink" href="#task-create-a-pool" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Browse to <strong>Local Traffic &gt; Pools</strong> and click the ‘<strong>+</strong>’ next to
 <strong>Pools List</strong> to create a new pool.</p>
@@ -296,7 +296,7 @@ it to the left.</p>
 </ol>
 </div>
 <div class="section" id="task-create-a-virtual-server">
-<h2>6.3. Task – Create a Virtual Server<a class="headerlink" href="#task-create-a-virtual-server" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create a Virtual Server<a class="headerlink" href="#task-create-a-virtual-server" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Browse to <strong>Local Traffic &gt; Virtual Servers</strong> and click the
 ‘<strong>+</strong>’ next to <strong>Virtual Server List</strong> to create a new one.</p>
@@ -330,7 +330,7 @@ the other settings at their default values:</p>
 </ol>
 </div>
 <div class="section" id="task-testing-without-apm">
-<h2>6.4. Task – Testing without APM<a class="headerlink" href="#task-testing-without-apm" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Testing without APM<a class="headerlink" href="#task-testing-without-apm" title="Permalink to this headline">¶</a></h2>
 <p>Observe the current behavior of the login page without authentication
 enforced by APM.</p>
 <ol class="arabic">
@@ -349,7 +349,7 @@ following:</p>
 </ol>
 </div>
 <div class="section" id="task-create-access-policy-to-use-with-forms-based-authentication">
-<h2>6.5. Task – Create Access Policy to use with Forms Based Authentication<a class="headerlink" href="#task-create-access-policy-to-use-with-forms-based-authentication" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create Access Policy to use with Forms Based Authentication<a class="headerlink" href="#task-create-access-policy-to-use-with-forms-based-authentication" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Open the <strong>Wizards &gt; Device Wizards</strong> page.</p>
 </li>
@@ -450,7 +450,7 @@ objects associated with this new policy and click <strong>Finished</strong>.</p>
 </ol>
 </div>
 <div class="section" id="task-applying-access-policy-changes">
-<h2>6.6. Task – Applying Access Policy Changes<a class="headerlink" href="#task-applying-access-policy-changes" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Applying Access Policy Changes<a class="headerlink" href="#task-applying-access-policy-changes" title="Permalink to this headline">¶</a></h2>
 <p>After you create or change an access policy, the link Apply Access
 Policy appears in yellow at the top left of the BIG-IP Configuration
 utility screen. You must click this link to activate the access policy
@@ -471,7 +471,7 @@ is displayed.</p>
 </ol>
 </div>
 <div class="section" id="task-testing-with-apm-authentication">
-<h2>6.7. Task – Testing with APM Authentication<a class="headerlink" href="#task-testing-with-apm-authentication" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Testing with APM Authentication<a class="headerlink" href="#task-testing-with-apm-authentication" title="Permalink to this headline">¶</a></h2>
 <p>Observe the behavior of the login page now that authentication is
 enforced by APM.</p>
 <ol class="arabic">
@@ -487,7 +487,7 @@ enforced by APM.</p>
 </ol>
 </div>
 <div class="section" id="task-testing-logout">
-<h2>6.8. Task – Testing Logout<a class="headerlink" href="#task-testing-logout" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Testing Logout<a class="headerlink" href="#task-testing-logout" title="Permalink to this headline">¶</a></h2>
 <p>Earlier in Task 3, Step 9, we defined a <strong>Logout URI Include</strong> for this
 Access Policy. This is a list of logoff URIs that the access profile
 searches for in order to terminate the Access Policy Manager session.
@@ -508,10 +508,10 @@ page.</li>
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="lab4.html" title="5. Lab 4 – Configuring an APM Webtop" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="lab4.html" title="Lab 4 – Configuring an APM Webtop" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
-              <a href="lab6.html" title="7. Lab 6 – BASIC Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="lab6.html" title="Lab 6 – BASIC Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>

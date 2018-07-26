@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. Lab 1 – Deploy a simple reverse proxy service &#8212; Introduction to Universal Access  documentation</title>
+    <title>Lab 1 – Deploy a simple reverse proxy service &#8212; Introduction to Universal Access  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,8 +28,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Lab 2 – Create My First Policy" href="lab2.html" />
-    <link rel="prev" title="1. Overview - Introduction to Universal Access" href="../../intro.html" />
+    <link rel="next" title="Lab 2 – Create My First Policy" href="lab2.html" />
+    <link rel="prev" title="Overview - Introduction to Universal Access" href="../../intro.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -212,12 +212,12 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">2. Lab 1 – Deploy a simple reverse proxy service</a><ul>
-<li><a class="reference internal" href="#lab-requirements">2.1. Lab Requirements</a></li>
-<li><a class="reference internal" href="#task-create-a-pool">2.2. Task – Create a pool</a></li>
-<li><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">2.3. Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
-<li><a class="reference internal" href="#task-create-https-virtual-server">2.4. Task - Create HTTPS Virtual Server</a></li>
-<li><a class="reference internal" href="#task-testing">2.5. Task - Testing</a></li>
+<li><a class="reference internal" href="#">Lab 1 – Deploy a simple reverse proxy service</a><ul>
+<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li><a class="reference internal" href="#task-create-a-pool">Task – Create a pool</a></li>
+<li><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
+<li><a class="reference internal" href="#task-create-https-virtual-server">Task - Create HTTPS Virtual Server</a></li>
+<li><a class="reference internal" href="#task-testing">Task - Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -225,29 +225,29 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Overview - Introduction to Universal Access</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Lab 1 – Deploy a simple reverse proxy service</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">2.1. Lab Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-a-pool">2.2. Task – Create a pool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">2.3. Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-https-virtual-server">2.4. Task - Create HTTPS Virtual Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing">2.5. Task - Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Overview - Introduction to Universal Access</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 1 – Deploy a simple reverse proxy service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-pool">Task – Create a pool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-https-virtual-server">Task - Create HTTPS Virtual Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing">Task - Testing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lab2.html">3. Lab 2 – Create My First Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab3.html">4. Lab 3 – Configuring a VPN Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab4.html">5. Lab 4 – Configuring an APM Webtop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab5.html">6. Lab 5 – FORMS Based Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab6.html">7. Lab 6 – BASIC Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab7.html">8. Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Lab 2 – Create My First Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Lab 3 – Configuring a VPN Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab4.html">Lab 4 – Configuring an APM Webtop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab5.html">Lab 5 – FORMS Based Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab6.html">Lab 6 – BASIC Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab7.html">Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../../intro.html"
-                        title="previous chapter">1. Overview - Introduction to Universal Access</a></p>
+                        title="previous chapter">Overview - Introduction to Universal Access</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="lab2.html"
-                        title="next chapter">3. Lab 2 – Create My First Policy</a></p>
+                        title="next chapter">Lab 2 – Create My First Policy</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -257,17 +257,17 @@
         </h4>
         
   <div class="section" id="lab-1-deploy-a-simple-reverse-proxy-service">
-<h1>2. Lab 1 – Deploy a simple reverse proxy service<a class="headerlink" href="#lab-1-deploy-a-simple-reverse-proxy-service" title="Permalink to this headline">¶</a></h1>
+<h1>Lab 1 – Deploy a simple reverse proxy service<a class="headerlink" href="#lab-1-deploy-a-simple-reverse-proxy-service" title="Permalink to this headline">¶</a></h1>
 <p>This lab will teach you how to configure resources including Virtual Servers, Pools, and monitors that we will use as the foundation for subsequent labs.</p>
 <div class="section" id="lab-requirements">
-<h2>2.1. Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>BIG-IP with APM licensed and activated</li>
 <li>Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80</li>
 </ul>
 </div>
 <div class="section" id="task-create-a-pool">
-<h2>2.2. Task – Create a pool<a class="headerlink" href="#task-create-a-pool" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create a pool<a class="headerlink" href="#task-create-a-pool" title="Permalink to this headline">¶</a></h2>
 <p>Follow these steps to complete this task:</p>
 <ol class="arabic">
 <li><p class="first">Browse to <strong>Local Traffic &gt;</strong> <strong>Pools</strong> and click the ‘<strong>+</strong>’
@@ -291,7 +291,7 @@ the left.</p>
 </ol>
 </div>
 <div class="section" id="task-create-http-virtual-server-to-redirect-to-https">
-<h2>2.3. Task - Create HTTP Virtual Server to redirect to HTTPS<a class="headerlink" href="#task-create-http-virtual-server-to-redirect-to-https" title="Permalink to this headline">¶</a></h2>
+<h2>Task - Create HTTP Virtual Server to redirect to HTTPS<a class="headerlink" href="#task-create-http-virtual-server-to-redirect-to-https" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Create a new Virtual Server by browsing to <strong>Local Traffic</strong> &gt;
 <strong>Virtual Servers</strong> &gt; <strong>Virtual Server List</strong> and click the
@@ -306,7 +306,7 @@ Port”, use <strong>80</strong>.</li>
 <p><a class="reference internal" href="../../_images/image5.png"><img alt="image3" src="../../_images/image5.png" style="width: 3.60417in; height: 1.98705in;" /></a></p>
 </div>
 <div class="section" id="task-create-https-virtual-server">
-<h2>2.4. Task - Create HTTPS Virtual Server<a class="headerlink" href="#task-create-https-virtual-server" title="Permalink to this headline">¶</a></h2>
+<h2>Task - Create HTTPS Virtual Server<a class="headerlink" href="#task-create-https-virtual-server" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Create a new Virtual Server by browsing to <strong>Local Traffic</strong> &gt;
 <strong>Virtual Servers</strong> &gt; <strong>Virtual Server List</strong> and click the
@@ -329,7 +329,7 @@ named <strong>http_pool</strong></li>
 </ol>
 </div>
 <div class="section" id="task-testing">
-<h2>2.5. Task - Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
+<h2>Task - Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
 <p>You should now be able to browse to either Virtual Server (HTTP or
 HTTPs) and you should get the same page. Try:
 <strong>http://www.f5demo.com</strong> and <strong>https://www.f5demo.com</strong></p>
@@ -342,10 +342,10 @@ HTTPs) and you should get the same page. Try:
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="../../intro.html" title="1. Overview - Introduction to Universal Access" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="../../intro.html" title="Overview - Introduction to Universal Access" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
-              <a href="lab2.html" title="3. Lab 2 – Create My First Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="lab2.html" title="Lab 2 – Create My First Policy" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Lab 4 – Configuring an APM Webtop &#8212; Introduction to Universal Access  documentation</title>
+    <title>Lab 4 – Configuring an APM Webtop &#8212; Introduction to Universal Access  documentation</title>
     
     <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -28,8 +28,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6. Lab 5 – FORMS Based Authentication" href="lab5.html" />
-    <link rel="prev" title="4. Lab 3 – Configuring a VPN Policy" href="lab3.html" />
+    <link rel="next" title="Lab 5 – FORMS Based Authentication" href="lab5.html" />
+    <link rel="prev" title="Lab 3 – Configuring a VPN Policy" href="lab3.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -212,12 +212,12 @@
    <span class="caption-text">Current Page</span>
   </p>
   <ul>
-<li><a class="reference internal" href="#">5. Lab 4 – Configuring an APM Webtop</a><ul>
-<li><a class="reference internal" href="#lab-requirements">5.1. Lab Requirements</a></li>
-<li><a class="reference internal" href="#task-create-a-webtop-resource">5.2. Task – Create a Webtop resource</a></li>
-<li><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">5.3. Task – Enable “Content Rewrite” on the Virtual Server</a></li>
-<li><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">5.4. Task – Add Webtop resource to existing Access Policy</a></li>
-<li><a class="reference internal" href="#task-testing">5.5. Task – Testing</a></li>
+<li><a class="reference internal" href="#">Lab 4 – Configuring an APM Webtop</a><ul>
+<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li><a class="reference internal" href="#task-create-a-webtop-resource">Task – Create a Webtop resource</a></li>
+<li><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">Task – Enable “Content Rewrite” on the Virtual Server</a></li>
+<li><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">Task – Add Webtop resource to existing Access Policy</a></li>
+<li><a class="reference internal" href="#task-testing">Task – Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -225,29 +225,29 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Overview - Introduction to Universal Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab1.html">2. Lab 1 – Deploy a simple reverse proxy service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab2.html">3. Lab 2 – Create My First Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab3.html">4. Lab 3 – Configuring a VPN Policy</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Lab 4 – Configuring an APM Webtop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">5.1. Lab Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-create-a-webtop-resource">5.2. Task – Create a Webtop resource</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">5.3. Task – Enable “Content Rewrite” on the Virtual Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">5.4. Task – Add Webtop resource to existing Access Policy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-testing">5.5. Task – Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Overview - Introduction to Universal Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Lab 1 – Deploy a simple reverse proxy service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Lab 2 – Create My First Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Lab 3 – Configuring a VPN Policy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 4 – Configuring an APM Webtop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-create-a-webtop-resource">Task – Create a Webtop resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-enable-content-rewrite-on-the-virtual-server">Task – Enable “Content Rewrite” on the Virtual Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-add-webtop-resource-to-existing-access-policy">Task – Add Webtop resource to existing Access Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-testing">Task – Testing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="lab5.html">6. Lab 5 – FORMS Based Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab6.html">7. Lab 6 – BASIC Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lab7.html">8. Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab5.html">Lab 5 – FORMS Based Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab6.html">Lab 6 – BASIC Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab7.html">Lab 7 – Single-Sign-On Across Authentication Domains</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="lab3.html"
-                        title="previous chapter">4. Lab 3 – Configuring a VPN Policy</a></p>
+                        title="previous chapter">Lab 3 – Configuring a VPN Policy</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="lab5.html"
-                        title="next chapter">6. Lab 5 – FORMS Based Authentication</a></p>
+                        title="next chapter">Lab 5 – FORMS Based Authentication</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -257,17 +257,17 @@
         </h4>
         
   <div class="section" id="lab-4-configuring-an-apm-webtop">
-<h1>5. Lab 4 – Configuring an APM Webtop<a class="headerlink" href="#lab-4-configuring-an-apm-webtop" title="Permalink to this headline">¶</a></h1>
+<h1>Lab 4 – Configuring an APM Webtop<a class="headerlink" href="#lab-4-configuring-an-apm-webtop" title="Permalink to this headline">¶</a></h1>
 <p>In this lab, we will add a Webtop resource to the Access Policy
 created in the previous lab.</p>
 <div class="section" id="lab-requirements">
-<h2>5.1. Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).</li>
 </ul>
 </div>
 <div class="section" id="task-create-a-webtop-resource">
-<h2>5.2. Task – Create a Webtop resource<a class="headerlink" href="#task-create-a-webtop-resource" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Create a Webtop resource<a class="headerlink" href="#task-create-a-webtop-resource" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Expand the <strong>Access</strong> tab from the main menu on the left and navigate
 to <strong>Webtops</strong> &gt; <strong>Webtop Lists</strong>.</p>
@@ -280,7 +280,7 @@ click <strong>Finished</strong>.</p>
 </ol>
 </div>
 <div class="section" id="task-enable-content-rewrite-on-the-virtual-server">
-<h2>5.3. Task – Enable “Content Rewrite” on the Virtual Server<a class="headerlink" href="#task-enable-content-rewrite-on-the-virtual-server" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Enable “Content Rewrite” on the Virtual Server<a class="headerlink" href="#task-enable-content-rewrite-on-the-virtual-server" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Browse to <strong>Local Traffic</strong> &gt; <strong>Virtual Servers &gt;</strong> <strong>Virtual Server
 List</strong> and click on the name of your VPN Virtual Server called
@@ -293,7 +293,7 @@ List</strong> and click on the name of your VPN Virtual Server called
 </ol>
 </div>
 <div class="section" id="task-add-webtop-resource-to-existing-access-policy">
-<h2>5.4. Task – Add Webtop resource to existing Access Policy<a class="headerlink" href="#task-add-webtop-resource-to-existing-access-policy" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Add Webtop resource to existing Access Policy<a class="headerlink" href="#task-add-webtop-resource-to-existing-access-policy" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Browse to <strong>Access</strong> &gt; <strong>Profiles / Policies &gt; Access Profiles
 (Per-Session Policies)</strong>, click on <strong>Edit</strong> for <strong>MyVPNPolicy</strong>. A
@@ -323,7 +323,7 @@ Policy</strong>”, then close the tab.</div>
 </ol>
 </div>
 <div class="section" id="task-testing">
-<h2>5.5. Task – Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
+<h2>Task – Testing<a class="headerlink" href="#task-testing" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Open a web browser to the virtual server created in the previous lab
 by navigating to <strong>https://myvpn.f5demo.com</strong>. You will be presented
@@ -349,10 +349,10 @@ appear on this Webtop page.</p>
 		     <div class="row next-prev-btn-row">
            <div class="col-lg-12">
            
-		        <a href="lab3.html" title="4. Lab 3 – Configuring a VPN Policy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+		        <a href="lab3.html" title="Lab 3 – Configuring a VPN Policy" accesskey="p" class="btn btn-primary pull-left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
            
            
-              <a href="lab5.html" title="6. Lab 5 – FORMS Based Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="lab5.html" title="Lab 5 – FORMS Based Authentication" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>
