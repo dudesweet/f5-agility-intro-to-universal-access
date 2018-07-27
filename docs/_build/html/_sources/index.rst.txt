@@ -1,5 +1,5 @@
-F5 Agility Labs - Index
-=======================
+F5 Agility Labs - Student Lab Guide
+===================================
 
 Welcome
 -------
@@ -21,6 +21,7 @@ through configuration steps for the following common use cases:
    :caption: Contents:
    :glob:
 
+   index.rst
    class*/module*/lab*
 
 Login instructions
