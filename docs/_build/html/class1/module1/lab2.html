@@ -213,7 +213,6 @@
   </p>
   <ul>
 <li><a class="reference internal" href="#">Lab 2 – Create My First Policy</a><ul>
-<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
 <li><a class="reference internal" href="#task-define-an-authentication-server">Task – Define an Authentication Server</a></li>
 <li><a class="reference internal" href="#task-create-a-simple-access-profile">Task – Create a Simple Access Profile</a></li>
 <li><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">Task – Associate Access Policy to Virtual Servers</a></li>
@@ -235,7 +234,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lab1.html">Lab 1 – Deploy a simple reverse proxy service</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 2 – Create My First Policy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-define-an-authentication-server">Task – Define an Authentication Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-create-a-simple-access-profile">Task – Create a Simple Access Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-associate-access-policy-to-virtual-servers">Task – Associate Access Policy to Virtual Servers</a></li>
@@ -268,9 +266,10 @@
 <p>In this lab, we will use the resources configured in the previous lab
 and configure a simple Access Profile using the Visual Policy Editor
 (VPE) to perform user authentication.</p>
-<div class="section" id="lab-requirements">
-<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
-<p>Working HTTP and HTTPS Virtual Servers (from previous lab)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Lab Requirements:
+Working HTTP and HTTPS Virtual Servers (from previous lab)</p>
 </div>
 <div class="section" id="task-define-an-authentication-server">
 <h2>Task – Define an Authentication Server<a class="headerlink" href="#task-define-an-authentication-server" title="Permalink to this headline">¶</a></h2>
@@ -283,7 +282,7 @@ Directory</strong></p>
 </li>
 <li><p class="first">Click <strong>Create…</strong> in the upper right-hand corner</p>
 </li>
-<li><p class="first">Configure the new server profile as follows:</p>
+<li><p class="first">Configure the new server profile as follows, then click <strong>Finished</strong>:</p>
 <ul class="simple">
 <li>Name: <strong>Lab_SSO_AD_Server</strong></li>
 <li>Domain Name: <strong>f5demo.com</strong></li>
@@ -291,8 +290,6 @@ Directory</strong></p>
 <li>Domain Controller: <strong>10.128.20.200</strong></li>
 </ul>
 <p><a class="reference internal" href="../../_images/image10.png"><img alt="image8" src="../../_images/image10.png" style="width: 2.59124in; height: 2.90971in;" /></a>   <a class="reference internal" href="../../_images/image11.png"><img alt="image9" src="../../_images/image11.png" style="width: 2.49705in; height: 2.49047in;" /></a></p>
-</li>
-<li><p class="first">Click <strong>Finished</strong></p>
 </li>
 </ol>
 </div>

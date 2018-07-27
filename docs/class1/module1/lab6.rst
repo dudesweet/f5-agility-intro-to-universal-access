@@ -40,7 +40,7 @@ Task 2: Create a Virtual Server
    ‘\ **+**\ ’ next to **Virtual Server List** to create a new one.
 
 #. Use the following information to create the virtual server and leave
-   other settings as default:
+   other settings as default, then click **Finished**:
 
    -  Name the pool “\ **basic\_vs**\ ”
 
@@ -61,8 +61,6 @@ Task 2: Create a Virtual Server
    | |image64|
 
    | |image65|
-
-#. Click **Finished**
 
 
 Task 3: Testing without APM

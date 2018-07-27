@@ -5,10 +5,9 @@ In this lab, we will use the resources configured in the previous lab
 and configure a simple Access Profile using the Visual Policy Editor
 (VPE) to perform user authentication.
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
-Working HTTP and HTTPS Virtual Servers (from previous lab)
+.. NOTE::
+   Lab Requirements:
+   Working HTTP and HTTPS Virtual Servers (from previous lab)
 
 
 Task – Define an Authentication Server
@@ -24,7 +23,7 @@ Follow these steps to complete this task:
 
 #. Click **Create…** in the upper right-hand corner
 
-#. Configure the new server profile as follows:
+#. Configure the new server profile as follows, then click **Finished**:
 
    - Name: **Lab\_SSO\_AD\_Server**
 
@@ -35,8 +34,6 @@ Follow these steps to complete this task:
    - Domain Controller: **10.128.20.200**
 
    |image8|   |image9|
-
-#. Click **Finished**
 
 
 Task – Create a Simple Access Profile

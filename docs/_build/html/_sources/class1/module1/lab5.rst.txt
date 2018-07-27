@@ -41,7 +41,7 @@ Task – Create a Virtual Server
    ‘\ **+**\ ’ next to **Virtual Server List** to create a new one.
 
 #. Use the following information to create the virtual server and leave
-   the other settings at their default values:
+   the other settings at their default values, then click **Finished**:
 
    -  Name the pool “\ **forms\_vs**\ ”
 
@@ -60,8 +60,6 @@ Task – Create a Virtual Server
    |image45|
    |image46|
    |image47|
-
-#. Click **Finished**.
 
 
 Task – Testing without APM

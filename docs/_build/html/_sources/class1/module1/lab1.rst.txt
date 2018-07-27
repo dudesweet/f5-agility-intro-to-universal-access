@@ -3,12 +3,10 @@ Lab 1 – Deploy a simple reverse proxy service
 
 This lab will teach you how to configure resources including Virtual Servers, Pools, and monitors that we will use as the foundation for subsequent labs.
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
--  BIG-IP with APM licensed and activated
-
--  Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80
+.. Lab Requirements::
+   Lab Requirements:
+   -  BIG-IP with APM licensed and activated
+   -  Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80
 
 
 Task – Create a pool
@@ -21,7 +19,7 @@ Follow these steps to complete this task:
 #. Name the pool in “\ **http\_pool**\ ”
 #. Assign the monitor “\ **http**\ ” by selecting it and sliding it to
    the left.
-#. **Add** the following “new node” members to the pool:
+#. **Add** the following “new node” members to the pool, then click **Finished**:
 
    -  Node Name: **server1**, Address: **10.128.20.200**, Service Port **80**
 
@@ -30,8 +28,6 @@ Follow these steps to complete this task:
    -  Node Name: **server3**, Address: **10.128.20.202**, Service Port **80**
 
    |image1|
-
-#. Click **Finished**
 
 
 Task - Create HTTP Virtual Server to redirect to HTTPS

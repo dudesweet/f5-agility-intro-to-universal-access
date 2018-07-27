@@ -213,7 +213,6 @@
   </p>
   <ul>
 <li><a class="reference internal" href="#">Lab 1 – Deploy a simple reverse proxy service</a><ul>
-<li><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
 <li><a class="reference internal" href="#task-create-a-pool">Task – Create a pool</a></li>
 <li><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
 <li><a class="reference internal" href="#task-create-https-virtual-server">Task - Create HTTPS Virtual Server</a></li>
@@ -234,7 +233,6 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lab 1 – Deploy a simple reverse proxy service</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lab-requirements">Lab Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-create-a-pool">Task – Create a pool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-create-http-virtual-server-to-redirect-to-https">Task - Create HTTP Virtual Server to redirect to HTTPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-create-https-virtual-server">Task - Create HTTPS Virtual Server</a></li>
@@ -266,13 +264,6 @@
   <div class="section" id="lab-1-deploy-a-simple-reverse-proxy-service">
 <h1>Lab 1 – Deploy a simple reverse proxy service<a class="headerlink" href="#lab-1-deploy-a-simple-reverse-proxy-service" title="Permalink to this headline">¶</a></h1>
 <p>This lab will teach you how to configure resources including Virtual Servers, Pools, and monitors that we will use as the foundation for subsequent labs.</p>
-<div class="section" id="lab-requirements">
-<h2>Lab Requirements<a class="headerlink" href="#lab-requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>BIG-IP with APM licensed and activated</li>
-<li>Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80</li>
-</ul>
-</div>
 <div class="section" id="task-create-a-pool">
 <h2>Task – Create a pool<a class="headerlink" href="#task-create-a-pool" title="Permalink to this headline">¶</a></h2>
 <p>Follow these steps to complete this task:</p>
@@ -285,15 +276,13 @@ next to <strong>Pools List</strong> to create a new pool.</p>
 <li><p class="first">Assign the monitor “<strong>http</strong>” by selecting it and sliding it to
 the left.</p>
 </li>
-<li><p class="first"><strong>Add</strong> the following “new node” members to the pool:</p>
+<li><p class="first"><strong>Add</strong> the following “new node” members to the pool, then click <strong>Finished</strong>:</p>
 <ul class="simple">
 <li>Node Name: <strong>server1</strong>, Address: <strong>10.128.20.200</strong>, Service Port <strong>80</strong></li>
 <li>Node Name: <strong>server2</strong>, Address: <strong>10.128.20.201</strong>, Service Port <strong>80</strong></li>
 <li>Node Name: <strong>server3</strong>, Address: <strong>10.128.20.202</strong>, Service Port <strong>80</strong></li>
 </ul>
 <p><a class="reference internal" href="../../_images/image3.png"><img alt="image1" src="../../_images/image3.png" style="width: 3.18038in; height: 3.19792in;" /></a></p>
-</li>
-<li><p class="first">Click <strong>Finished</strong></p>
 </li>
 </ol>
 </div>
