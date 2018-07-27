@@ -5,10 +5,11 @@ In this lab, we will show you how to configure basic authentication
 leveraging the SSO functionality of APM.
 
 .. NOTE::
-   Lab Requirements:
-   - BIG-IP with APM licensed and activated
-   - Server running AD and Web services
-   - Local Host file entries on the Jump Host
+  Lab Requirements:
+
+  - BIG-IP with APM licensed and activated
+  - Server running AD and Web services
+  - Local Host file entries on the Jump Host
 
 
 Task – Create a Pool

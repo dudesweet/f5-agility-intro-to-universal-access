@@ -8,8 +8,9 @@ re-use an existing APM session to access multiple applications.
 
 
 .. NOTE::
-   Lab Requirements:
-   - Previous Labs 5 and 6 successfully completed
+  Lab Requirements:
+
+  - Previous Labs 5 and 6 successfully completed
 
 
 Task – Verify Authentication Required for different applications

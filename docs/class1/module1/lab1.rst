@@ -3,9 +3,11 @@ Lab 1 – Deploy a simple reverse proxy service
 
 This lab will teach you how to configure resources including Virtual Servers, Pools, and monitors that we will use as the foundation for subsequent labs.
 
-Lab Requirements:
-- BIG-IP with APM licensed and activated
-- Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80
+.. NOTE::
+  Lab Requirements:
+
+  - BIG-IP with APM licensed and activated
+  - Web site up and running at 10.128.20.200:80, 10.128.20.201:80 and 10.128.20.202:80
 
 
 Task – Create a pool

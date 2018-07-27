@@ -6,8 +6,9 @@ created in the previous lab.
 
 
 .. NOTE::
-   Lab Requirements:
-   - Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).
+  Lab Requirements:
+
+  - Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).
 
 
 Task – Create a Webtop resource
