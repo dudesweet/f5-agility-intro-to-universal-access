@@ -28,7 +28,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview - Introduction to Universal Access" href="intro.html" />
+    <link rel="next" title="Lab 1 – Deploy a simple reverse proxy service" href="class1/module1/lab1.html" />
 <!--
 # Copyright 2017 F5 Networks
 #
@@ -213,6 +213,10 @@
   <ul>
 <li><a class="reference internal" href="#">F5 Agility Labs - Index</a><ul>
 <li><a class="reference internal" href="#welcome">Welcome</a></li>
+<li><a class="reference internal" href="#login-instructions">Login instructions</a></li>
+<li><a class="reference internal" href="#lab-topology">Lab Topology</a></li>
+<li><a class="reference internal" href="#lab-components">Lab Components</a></li>
+<li><a class="reference internal" href="#labs-timing-duration">Labs Timing/Duration</a></li>
 </ul>
 </li>
 </ul>
@@ -220,7 +224,6 @@
 
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview - Introduction to Universal Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class1/module1/lab1.html">Lab 1 – Deploy a simple reverse proxy service</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class1/module1/lab2.html">Lab 2 – Create My First Policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="class1/module1/lab3.html">Lab 3 – Configuring a VPN Policy</a></li>
@@ -231,8 +234,8 @@
 </ul>
 
   <h4>Next topic</h4>
-  <p class="topless"><a href="intro.html"
-                        title="next chapter">Overview - Introduction to Universal Access</a></p>
+  <p class="topless"><a href="class1/module1/lab1.html"
+                        title="next chapter">Lab 1 – Deploy a simple reverse proxy service</a></p>
         
       </div>
       <div class="col-md-offset-3 col-sm-offset-3 main">
@@ -250,16 +253,17 @@
 pipeline and is sourced from the GitHub repository at <a class="reference external" href="https://github.com/danielcayer/f5-agility-intro-to-universal-access">https://github.com/danielcayer/f5-agility-intro-to-universal-access</a>.
 Bugs and Requests for enhancements can be made using by
 opening an Issue within the repository.</p>
+<p>This class will cover APM concepts and will guide students
+through configuration steps for the following common use cases:</p>
+<ul class="simple">
+<li>Remote access VPN services</li>
+<li>Web portals (Webtops) for publishing internal applications</li>
+<li>Using different authentication protocols</li>
+<li>Single-Sign-On (SSO) functionality</li>
+</ul>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview - Introduction to Universal Access</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#login-instructions">Login instructions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#lab-topology">Lab Topology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#lab-components">Lab Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#labs-timing-duration">Labs Timing/Duration</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="class1/module1/lab1.html">Lab 1 – Deploy a simple reverse proxy service</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="class1/module1/lab1.html#lab-requirements">Lab Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="class1/module1/lab1.html#task-create-a-pool">Task – Create a pool</a></li>
@@ -323,6 +327,150 @@ opening an Issue within the repository.</p>
 </ul>
 </div>
 </div>
+<div class="section" id="login-instructions">
+<h2>Login instructions<a class="headerlink" href="#login-instructions" title="Permalink to this headline">¶</a></h2>
+<p>Please follow the instructions provided by the instructor to start your
+lab and access your jump host.</p>
+<p>To access your dedicated student lab environment, you will require a web browser and Remote
+Desktop Protocol (RDP) client software. The web browser will be used to
+access the Lab Training Portal. The RDP client will be used to connect
+to the Jump Host, where you will be able to access the BIG-IP management
+interfaces (HTTPS, SSH).</p>
+<ol class="arabic simple">
+<li>Establish an RDP connection to your Jump Host and login with the following credentials:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>User: <strong>user</strong></li>
+<li>Password: <strong>Agility1</strong></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Access the <strong>BIG-IP</strong> GUI <strong>https://10.128.1.245</strong> (you can double-click on the red “f5 Big-IP” shortcut icon on the Windows desktop).</li>
+<li>Login into the BIG-IP Configuration Utility with the following credentials:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>User: <strong>admin</strong></li>
+<li>Password: <strong>admin</strong></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All work for this lab will be performed exclusively from the Windows
+jumphost. No installation or interaction with your local system is
+required.</p>
+</div>
+</div>
+<div class="section" id="lab-topology">
+<h2>Lab Topology<a class="headerlink" href="#lab-topology" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/image2.tiff"><img alt="image0" src="_images/image2.tiff" style="width: 5.30972in; height: 3.44931in;" /></a></p>
+<p>The following components have been included in your lab environment:</p>
+<ul class="simple">
+<li>1 x F5 BIG-IP VE v13.1 (provisioned for Local Traffic Manager and Access Policy Manager)</li>
+<li>1 x Windows Server running Active Directory and Web services</li>
+<li>1 x Windows Jumphost</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The following entries have been added in the local hosts file of your Jumphost:</p>
+<ul class="last simple">
+<li>10.128.10.10 www.f5demo.com</li>
+<li>10.128.10.11 myvpn.f5demo.com</li>
+<li>10.128.20.200 www2.f5demo.com</li>
+<li>10.128.10.11 webtop.f5demo.com</li>
+<li>10.128.10.12 forms.f5demo.com</li>
+<li>10.128.10.12 forms.f5demo.com</li>
+<li>10.128.10.13 basic.f5demo.com</li>
+<li>10.128.10.13 app1.f5demo.com</li>
+<li>10.128.10.13 app2.f5demo.com</li>
+<li>10.128.10.13 app3.f5demo.com</li>
+<li>10.128.1.245 bigip1.f5demo.com</li>
+</ul>
+</div>
+</div>
+<div class="section" id="lab-components">
+<h2>Lab Components<a class="headerlink" href="#lab-components" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists VLANS, IP Addresses and Credentials for all
+components:</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub"><strong>Component</strong></th>
+<th class="head"><strong>VLAN/IP Address(es)</strong></th>
+<th class="head"><strong>Credentials</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">BIG-IP</th>
+<td><ul class="first last simple">
+<li><strong>Management:</strong> 10.128.1.245</li>
+<li><strong>Internal:</strong> 10.128.20.245</li>
+<li><strong>External:</strong> 10.128.10.245</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">admin</span></code>/<code class="docutils literal"><span class="pre">admin</span></code></td>
+</tr>
+<tr class="row-odd"><th class="stub">Jumphost</th>
+<td><ul class="first last simple">
+<li><strong>Management:</strong> 10.128.1.5</li>
+<li><strong>External:</strong> 10.128.10.5</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">user</span></code>/<code class="docutils literal"><span class="pre">Agility1</span></code></td>
+</tr>
+<tr class="row-even"><th class="stub">Lab Server</th>
+<td><ul class="first last simple">
+<li><strong>Internal:</strong> 10.128.20.201</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">administrator</span></code>/<code class="docutils literal"><span class="pre">Agility2018</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="labs-timing-duration">
+<h2>Labs Timing/Duration<a class="headerlink" href="#labs-timing-duration" title="Permalink to this headline">¶</a></h2>
+<p>The time it takes to perform each lab varies and is mostly dependent on accurately completing steps. Below is an estimate of how long it will take for each lab:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="75%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Lab name (Description)</th>
+<th class="head">Time Allocated</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Lab 1 - Deploy a simple reverse proxy service</td>
+<td>10 minutes</td>
+</tr>
+<tr class="row-odd"><td>Lab 2 – Create My First Policy</td>
+<td>15 minutes</td>
+</tr>
+<tr class="row-even"><td>Lab 3 – Configuring a VPN Policy</td>
+<td>20 minutes</td>
+</tr>
+<tr class="row-odd"><td>Lab 4 – Configuring an APM Webtop</td>
+<td>10 minutes</td>
+</tr>
+<tr class="row-even"><td>Lab 5 – FORMS Based Authentication</td>
+<td>15 minutes</td>
+</tr>
+<tr class="row-odd"><td>Lab 6 – BASIC Authentication</td>
+<td>15 minutes</td>
+</tr>
+<tr class="row-even"><td>Lab 7 – Single-Sign-On Across Authentication Domains</td>
+<td>20 minutes</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -331,7 +479,7 @@ opening an Issue within the repository.</p>
            <div class="col-lg-12">
            
            
-              <a href="intro.html" title="Overview - Introduction to Universal Access" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+              <a href="class1/module1/lab1.html" title="Lab 1 – Deploy a simple reverse proxy service" accesskey="n" class="btn btn-primary pull-right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
            
 		     </div>
          </div>
