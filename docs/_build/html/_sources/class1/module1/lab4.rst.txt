@@ -5,10 +5,9 @@ In this lab, we will add a Webtop resource to the Access Policy
 created in the previous lab.
 
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
--  Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).
+.. NOTE::
+   Lab Requirements:
+   - Working HTTPS Virtual Server created in Lab 1 with Access Policy created in Lab 2 (Lab 2 successfully completed).
 
 
 Task – Create a Webtop resource

@@ -5,15 +5,11 @@ In this lab, we will use the Device Wizard to configure a new SSL VPN
 service with the necessary Network Access Resources on APM.
 
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
--  BIG-IP with APM licensed and activated
-
--  Server running AD and Web services
-
--  Local Host file entries on the Jump Host
-
+.. NOTE::
+   Lab Requirements:
+   - BIG-IP with APM licensed and activated
+   - Server running AD and Web services
+   - Local Host file entries on the Jump Host
 
 
 Task – Use the Wizard to create a new Remote Access service

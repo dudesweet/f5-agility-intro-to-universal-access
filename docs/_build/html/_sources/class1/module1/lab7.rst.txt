@@ -7,10 +7,9 @@ application is accessed. By using a Domain Cookie it is possible to
 re-use an existing APM session to access multiple applications.
 
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
--  Previous Labs 5 and 6 successfully completed
+.. NOTE::
+   Lab Requirements:
+   - Previous Labs 5 and 6 successfully completed
 
 
 Task – Verify Authentication Required for different applications

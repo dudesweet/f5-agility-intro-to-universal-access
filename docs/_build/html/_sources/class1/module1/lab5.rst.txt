@@ -6,14 +6,11 @@ functionality with an application server that uses forms based
 authentication.
 
 
-Lab Requirements
-~~~~~~~~~~~~~~~~
-
--  BIG-IP with APM licensed and activated
-
--  Server running AD and Web services
-
--  Local Host file entries on the Jump Host
+.. NOTE::
+   Lab Requirements:
+   - BIG-IP with APM licensed and activated
+   - Server running AD and Web services
+   - Local Host file entries on the Jump Host
 
 
 Task – Create a Pool
