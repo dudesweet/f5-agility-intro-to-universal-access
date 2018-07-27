@@ -73,8 +73,7 @@ Task - Create HTTPS Virtual Server
 
 #. For “Source Address Translation”, choose **Auto Map**
 
-#. For “Default Pool”, select the pool created earlier. It should be
-   named **http\_pool**
+#. For “Default Pool”, select the pool created earlier. It should be named **http\_pool**
 
 |image4|
 
