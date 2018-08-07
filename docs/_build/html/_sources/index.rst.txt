@@ -38,17 +38,17 @@ interfaces (HTTPS, SSH).
 
 #. Establish an RDP connection to your Jump Host and login with the following credentials:
 
-  - User: **user**
+   - User: **user**
 
-  - Password: **Agility1**
+   - Password: **Agility1**
 
 #. Access the **BIG-IP** GUI **https://10.128.1.245** (you can double-click on the red “f5 Big-IP” shortcut icon on the Windows desktop).
 
 #. Login into the BIG-IP Configuration Utility with the following credentials:
 
-  - User: **admin**
+   - User: **admin**
 
-  - Password: **admin**
+   - Password: **admin**
 
 
 .. NOTE::
@@ -68,7 +68,6 @@ The following components have been included in your lab environment:
 - 1 x F5 BIG-IP VE v13.1 (provisioned for Local Traffic Manager and Access Policy Manager)
 - 1 x Windows Server running Active Directory and Web services
 - 1 x Windows Jumphost
-
 
 .. NOTE::
   The following entries have been added in the local hosts file of your Jumphost:
